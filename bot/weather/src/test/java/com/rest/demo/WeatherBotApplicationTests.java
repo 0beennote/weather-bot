@@ -15,15 +15,15 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootTest
 public class WeatherBotApplicationTests {
 
-	@Test
-	public void contextLoads() {
+    @Test
+    public void contextLoads() {
         RestTemplate restTemplate = new RestTemplate();
 
         // Call API
         OpenWeatherApiUrl openWeatherApiUrl = OpenWeatherApiUrl.builder().build();
-		ResponseEntity<String> response = restTemplate.getForEntity(openWeatherApiUrl.getUrl(), String.class);
-		
-		assertTrue("response.getStatusCodeValue() is not 200", response.getStatusCodeValue() == 200);
-	}
+        ResponseEntity<String> response = restTemplate.getForEntity(openWeatherApiUrl.getUrl(), String.class);
+        
+        assertTrue("response.getStatusCodeValue() is not 200", response.getStatusCodeValue() == 200);
+    }
 
 }

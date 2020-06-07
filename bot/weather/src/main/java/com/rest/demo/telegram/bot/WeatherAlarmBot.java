@@ -18,7 +18,7 @@ public class WeatherAlarmBot extends TelegramLongPollingBot {
     @Value("${telegram.bot.username}")
     private String botUsername;
 
-    @Value("${telegram.bot.username}")
+    @Value("${telegram.bot.token}")
     private String botToken;
 
     private WeatherApiService weatherApiService;
